@@ -1,4 +1,4 @@
-package com.esee1rg.rabbitappconsume.repositories;
+package com.see1rg.rabbitconsume.repositories;
 
 
 import org.slf4j.Logger;
