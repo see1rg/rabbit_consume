@@ -16,7 +16,7 @@ public class SecondRepository {
     }
 
     public void save(String message) {
-        logger.info("save " + message);
+        logger.info("save {}", message);
         secondJdbcTemplate.update(FirstRepository.INSERT_SQL, message);
     }
 }

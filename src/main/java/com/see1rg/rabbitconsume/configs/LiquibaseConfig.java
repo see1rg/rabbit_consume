@@ -9,12 +9,13 @@ import javax.sql.DataSource;
 
 @Configuration
 public class LiquibaseConfig {
+    private static final String CLASSPATH = "classpath:liquibase/changelog-master.yml";
 
     @Bean
     public SpringLiquibase firstLiquibase(@Qualifier("firstDataSource") DataSource firstDataSource) {
         SpringLiquibase liquibase = new SpringLiquibase();
         liquibase.setDataSource(firstDataSource);
-        liquibase.setChangeLog("classpath:liquibase/changelog-master.yml");
+        liquibase.setChangeLog(CLASSPATH);
         return liquibase;
     }
 
@@ -22,7 +23,7 @@ public class LiquibaseConfig {
     public SpringLiquibase secondLiquibase(@Qualifier("secondDataSource") DataSource secondDataSource) {
         SpringLiquibase liquibase = new SpringLiquibase();
         liquibase.setDataSource(secondDataSource);
-        liquibase.setChangeLog("classpath:liquibase/changelog-master.yml");
+        liquibase.setChangeLog(CLASSPATH);
         return liquibase;
     }
 
@@ -30,7 +31,7 @@ public class LiquibaseConfig {
     public SpringLiquibase thirdLiquibase(@Qualifier("thirdDataSource") DataSource thirdDataSource) {
         SpringLiquibase liquibase = new SpringLiquibase();
         liquibase.setDataSource(thirdDataSource);
-        liquibase.setChangeLog("classpath:liquibase/changelog-master.yml");
+        liquibase.setChangeLog(CLASSPATH);
         return liquibase;
     }
 }

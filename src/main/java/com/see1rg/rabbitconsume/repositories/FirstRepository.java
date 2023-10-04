@@ -19,7 +19,7 @@ public class FirstRepository{
     }
 
     public void save(String message){
-        logger.info("save " + message);
+        logger.info("save {}", message);
         firstJdbcTemplate.update(INSERT_SQL, message);
     }
 }

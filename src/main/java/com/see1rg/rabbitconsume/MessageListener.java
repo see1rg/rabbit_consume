@@ -27,18 +27,18 @@ public class MessageListener {
     @RabbitListener(queues = MQConfig.QUEUE1)
     public void listener1(String message) {
         firstRepository.save(message);
-        logger.info("Received message from queue 1: " + message);
+        logger.info("Received message from queue 1: {}", message);
     }
 
     @RabbitListener(queues = MQConfig.QUEUE2)
     public void listener2(String message) {
         secondRepository.save(message);
-        logger.info("Received message from queue 2: " + message);
+        logger.info("Received message from queue 2: {}", message);
     }
 
     @RabbitListener(queues = MQConfig.QUEUE3)
     public void listener3(String message) {
         thirdRepository.save(message);
-        logger.info("Received message from queue 3: " + message);
+        logger.info("Received message from queue 3: {}", message);
     }
 }
