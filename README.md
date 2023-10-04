@@ -33,7 +33,7 @@ my_project/
   │   │   │   ├── java/
   │   │   │   │   ├── com/
   │   │   │   │   │   ├── see1rg/
-  │   │   │   │   │   │   ├── rabbitponsume/
+  │   │   │   │   │   │   ├── rabbitconsume/
   │   │   │   │   │   │   │   ├── ConsumerMain.java
   │   │   ├── resources/
   │   │   ├── ...
